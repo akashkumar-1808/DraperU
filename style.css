@@ -453,6 +453,23 @@ ul {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), var(--shadow-glow);
 }
 
+a.info-card.location-card {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a.info-card.location-card:hover {
+    transform: translateX(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 179, 0, 0.5);
+}
+
+a.info-card.location-card:active {
+    transform: translateX(-5px) scale(0.98);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 179, 0, 0.3);
+    transition: all 0.1s ease;
+}
+
 .card-icon {
     font-size: 2.5rem;
     background: linear-gradient(135deg, var(--clr-bright-red), var(--clr-warm-orange));
@@ -2567,6 +2584,114 @@ ul {
 
     .time-value {
         font-size: 2rem;
+    }
+}
+
+/* ================== EXPERIENCE REELS SECTION ================== */
+.reels-section {
+    padding: var(--section-padding);
+    background-color: var(--clr-soft-cream);
+    position: relative;
+    z-index: 2;
+}
+
+.reels-label {
+    display: inline-block;
+    color: var(--clr-deep-red);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.reels-title {
+    font-size: 3rem;
+    color: var(--clr-royal-navy);
+    line-height: 1.2;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.reels-desc {
+    color: var(--clr-royal-navy);
+    opacity: 0.8;
+    font-size: 1.15rem;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reels-showcase {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.reels-right-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 1.5rem;
+}
+
+.reel-card {
+    background: #4A0E1B;
+    border: 1px solid rgba(255, 179, 0, 0.3);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-smooth);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reel-card iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: none;
+    background: transparent;
+}
+
+.reel-large iframe {
+    min-height: 700px;
+}
+
+.reel-small iframe {
+    min-height: 350px;
+}
+
+.reel-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(74, 14, 27, 0.3), 0 0 25px rgba(255, 179, 0, 0.25);
+    border-color: var(--clr-golden-yellow);
+}
+
+/* Reels Responsive */
+@media (max-width: 1024px) {
+    .reels-showcase {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .reel-large iframe {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reels-right-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .reel-large iframe,
+    .reel-small iframe {
+        min-height: 450px;
     }
 }
 
