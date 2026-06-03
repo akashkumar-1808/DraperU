@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DraperU Summer Carnival Pitch Competition</title>
+    <meta name="description"
+        content="The Carnival Where Bold Founders Take The Stage. A premium event by DraperU India.">
+    <!-- Google Fonts: Inter for general text, Outfit for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="carnival-bg">
+        <div class="radial-rays"></div>
+        <div class="spotlight"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- 1. Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo"><img src="assets/DraperU India Logo 1.png" alt="DraperU India Logo"
+                    class="nav-logo-img"></a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#prizes">Prizes</a>
+                <a href="#partners">Partners</a>
+                <a href="#explore-us">Explore Us</a>
+                <a href="#who-should-join">Who Should Join</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="https://luma.com/trbmiajs" target="_blank" class="btn-primary cta-register">Register Now</a>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <!-- Left Side -->
+            <div class="hero-content">
+                <div class="event-badge">
+                    🎪 PITCH • BUILD • WIN - JUNE 7
+                </div>
+                <h1 class="hero-title">
+                    The Carnival Where<br>
+                    <span class="highlight-text">Bold Founders</span><br>
+                    Take The Stage.
+                </h1>
+                <p class="hero-description">
+                    DraperU India presents the Summer Carnival Pitch Competition — a high-energy event where
+                    ambitious student founders pitch bold ideas, network with mentors, and compete on stage.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://luma.com/trbmiajs" target="_blank" class="btn-primary btn-large">Register Now</a>
+                    <a href="#about" class="btn-secondary btn-large">View Event Details</a>
+                </div>
+                <p class="hero-info-text">Pitch competition open for registered participants only</p>
+            </div>
+
+            <!-- Right Side (Cards) -->
+            <div class="hero-cards">
+                <div class="info-card">
+                    <div class="card-icon">📅</div>
+                    <div class="card-details">
+                        <span class="card-label">DATE</span>
+                        <h3 class="card-value">Sunday<br>June 7, 2026</h3>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">⏰</div>
+                    <div class="card-details">
+                        <span class="card-label">TIME</span>
+                        <h3 class="card-value">10:00 AM — Onwards</h3>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">📍</div>
+                    <div class="card-details">
+                        <span class="card-label">VENUE</span>
+                        <h3 class="card-value">DraperU India<br>On-Site</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section" id="countdown">
+        <div class="section-container">
+            <div class="countdown-wrapper">
+                <!-- Left Side -->
+                <div class="countdown-text">
+                    <span class="countdown-label">/ COUNTDOWN TO SHOWTIME</span>
+                    <h2 class="countdown-title">The clock is <span class="highlight-text">ticking.</span></h2>
+                    <p class="countdown-subtext">June 7, 2026 &bull; 10:00 AM IST</p>
+                </div>
+
+                <!-- Right Side -->
+                <div class="countdown-timer" id="timer-display">
+                    <div class="time-box">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">DAYS</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">HOURS</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">MINUTES</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">SECONDS</span>
+                    </div>
+                </div>
+                <div class="countdown-message hidden" id="countdown-message">
+                    <h2>🎪 The Carnival Has Begun!</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Event Poster & Founder Program Section -->
+    <section class="poster-program-section" id="poster">
+        <div class="section-container">
+            <div class="poster-split-layout">
+
+                <!-- LEFT SIDE: Poster Showcase (55%) -->
+                <div class="poster-left-col">
+                    <div class="poster-showcase-premium">
+                        <div class="poster-ambient-glow"></div>
+                        <div class="poster-frame" id="poster-tilt">
+                            <img src="assets/poster.png" alt="DraperU Summer Carnival Official Poster"
+                                class="official-poster"
+                                onerror="this.src='https://via.placeholder.com/800x1130/0B255E/FFB300?text=Event+Poster+Placeholder'; this.alt='Placeholder Poster';">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE: Founder Program Info (45%) -->
+                <div class="program-right-col">
+                    <div class="program-info-card">
+                        <div class="program-glow"></div>
+                        <div class="program-card-content">
+                            <span class="program-label">DRAPER FOUNDER PROGRAM</span>
+                            <h2 class="program-title">More than a pitch.<br><span class="text-gradient-warm">A founder
+                                    launchpad.</span></h2>
+
+                            <p class="program-desc">The Draper Founder Program is designed for ambitious builders ready
+                                to turn ideas into startups. Through mentorship, founder guidance, hands-on
+                                entrepreneurial learning, startup exposure, and access to a global network, participants
+                                gain real-world insight into what it takes to build and scale bold companies.</p>
+
+                            <p class="program-subdesc">At DraperU, founders learn through action &mdash; pitching,
+                                collaborating, solving real startup problems, and connecting with entrepreneurs,
+                                mentors, and investors who have built globally recognized companies.</p>
+
+                            <div class="program-features">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- 3. About Event Section -->
+    <section class="about-bento" id="about">
+        <!-- Ambient Background Glows -->
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+        <div class="ambient-glow glow-3"></div>
+
+        <div class="section-container" style="position: relative; z-index: 2;">
+            <div class="about-bento-header">
+                <div class="about-bento-title-box">
+                    <span class="countdown-label"
+                        style="color: var(--clr-golden-yellow); margin-bottom: 1rem; display: block;">/ ABOUT THE
+                        CARNIVAL</span>
+                    <h2 class="bento-title">Not just an event.<br><span class="text-gradient-gold">A founder's
+                            playground.</span></h2>
+                </div>
+                <div class="about-bento-desc-box">
+                    <p>The Summer Carnival is built for ambitious student founders &mdash; where startup energy meets
+                        carnival excitement, real networking, live pitching, and bold opportunities.</p>
+                </div>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Card 01 (Wide) -->
+                <div class="bento-card">
+                    <div class="bento-card-header">
+                        <div class="bento-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                                <path
+                                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                            </svg>
+                        </div>
+                        <span class="bento-number">01</span>
+                    </div>
+                    <h3>A Day of Bold Ideas</h3>
+                    <p>Live startup showcases, exciting pitches, founder interactions, and experiences built for
+                        ambitious students.</p>
+                </div>
+
+                <!-- Card 02 (Standard) -->
+                <div class="bento-card">
+                    <div class="bento-card-header">
+                        <div class="bento-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                <line x1="12" x2="12" y1="19" y2="22" />
+                            </svg>
+                        </div>
+                        <span class="bento-number">02</span>
+                    </div>
+                    <h3>Pitch the Real Deal</h3>
+                    <p>Selected participants get the opportunity to pitch on stage, showcase ideas, and impress founders
+                        and mentors.</p>
+                </div>
+
+                <!-- Card 03 (Standard) -->
+                <div class="bento-card">
+                    <div class="bento-card-header">
+                        <div class="bento-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <span class="bento-number">03</span>
+                    </div>
+                    <h3>Meet Mentors & Builders</h3>
+                    <p>Network with startup founders, mentors, creators, and ambitious students building real things.
+                    </p>
+                </div>
+
+                <!-- Card 04 (Wide) -->
+                <div class="bento-card">
+                    <div class="bento-card-header">
+                        <div class="bento-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                                <path d="M5 3v4" />
+                                <path d="M19 17v4" />
+                                <path d="M3 5h4" />
+                                <path d="M17 19h4" />
+                            </svg>
+                        </div>
+                        <span class="bento-number">04</span>
+                    </div>
+                    <h3>Carnival, Not a Conference</h3>
+                    <p>An energetic atmosphere filled with lights, ideas, founders, experiences, and startup excitement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Prizes Section -->
+    <section class="prizes-showcase" id="prizes">
+        <div class="section-container">
+            <div class="prizes-header">
+                <span class="prizes-label">/ PRIZES & REWARDS</span>
+                <h2 class="prizes-title">More than trophies.<br><span class="text-gradient-carnival">Rocket fuel.</span>
+                </h2>
+                <p class="prizes-desc">The carnival isn't about a cheque &mdash; it's about the unfair access,
+                    mentorship, and visibility that compounds for years.</p>
+            </div>
+
+            <div class="prizes-grid">
+                <!-- RANK 01: Champion -->
+                <div class="prize-card premium-champion">
+                    <div class="prize-glow-bg"></div>
+                    <div class="prize-card-top">
+                        <div class="rank-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                                <path d="M4 22h16" />
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                            </svg>
+                            <span>RANK 01</span>
+                        </div>
+                        <span class="top-prize-tag">TOP PRIZE</span>
+                    </div>
+                    <div class="prize-card-titles">
+                        <h3>Champion</h3>
+                        <span class="prize-subtitle">The Carnival Crown</span>
+                    </div>
+                    <ul class="prize-benefits">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m8.6 10.5 4.8-4.8c1.1-1.1 2.9-1.1 4 0l1 1c1.1 1.1 1.1 2.9 0 4l-4.8 4.8" />
+                                <path d="M14.6 7.4 9 13" />
+                                <path d="m20.5 2.5-2.2 2.2" />
+                                <path d="m3.5 20.5 2.2-2.2" />
+                                <path d="m20 18-3-3" />
+                                <path d="m6 4 3 3" />
+                                <path d="m2.5 20.5 8-8" />
+                            </svg> Direct Mentorship from DraperU</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m8.6 10.5 4.8-4.8c1.1-1.1 2.9-1.1 4 0l1 1c1.1 1.1 1.1 2.9 0 4l-4.8 4.8" />
+                                <path d="M14.6 7.4 9 13" />
+                                <path d="m20.5 2.5-2.2 2.2" />
+                                <path d="m3.5 20.5 2.2-2.2" />
+                                <path d="m20 18-3-3" />
+                                <path d="m6 4 3 3" />
+                                <path d="m2.5 20.5 8-8" />
+                            </svg> Featured Draper Spotlight</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m8.6 10.5 4.8-4.8c1.1-1.1 2.9-1.1 4 0l1 1c1.1 1.1 1.1 2.9 0 4l-4.8 4.8" />
+                                <path d="M14.6 7.4 9 13" />
+                                <path d="m20.5 2.5-2.2 2.2" />
+                                <path d="m3.5 20.5 2.2-2.2" />
+                                <path d="m20 18-3-3" />
+                                <path d="m6 4 3 3" />
+                                <path d="m2.5 20.5 8-8" />
+                            </svg> Ecosystem Grants & Perks</li>
+                    </ul>
+                </div>
+
+                <!-- RANK 02 -->
+                <div class="prize-card standard-prize">
+                    <div class="prize-card-top">
+                        <div class="rank-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7" />
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                            </svg>
+                            <span>RANK 02</span>
+                        </div>
+                    </div>
+                    <div class="prize-card-titles">
+                        <h3>First Runner-Up</h3>
+                        <span class="prize-subtitle">Builder of the Day</span>
+                    </div>
+                    <ul class="prize-benefits">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 15V3" />
+                                <path d="m7 8 5-5 5 5" />
+                            </svg> Mentorship Session</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 15V3" />
+                                <path d="m7 8 5-5 5 5" />
+                            </svg> Draper Founder Feature</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 15V3" />
+                                <path d="m7 8 5-5 5 5" />
+                            </svg> Partner Credits</li>
+                    </ul>
+                </div>
+
+                <!-- RANK 03 -->
+                <div class="prize-card standard-prize">
+                    <div class="prize-card-top">
+                        <div class="rank-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7" />
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                            </svg>
+                            <span>RANK 03</span>
+                        </div>
+                    </div>
+                    <div class="prize-card-titles">
+                        <h3>Second Runner-Up</h3>
+                        <span class="prize-subtitle">Breakout Pitch</span>
+                    </div>
+                    <ul class="prize-benefits">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 15V3" />
+                                <path d="m7 8 5-5 5 5" />
+                            </svg> Strategy Call with Mentor</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 15V3" />
+                                <path d="m7 8 5-5 5 5" />
+                            </svg> Community Recognition</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 15V3" />
+                                <path d="m7 8 5-5 5 5" />
+                            </svg> Draper Perks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section" id="partners">
+        <div class="section-container">
+            <div class="partners-header text-center">
+                <span class="partners-label">/ TRUSTED ECOSYSTEM</span>
+                <h2 class="partners-title">Our Partners</h2>
+            </div>
+
+            <div class="premium-marquee-wrapper">
+                <div class="premium-marquee-track">
+                    <!-- First group of logos -->
+                    <div class="premium-marquee-group">
+                        <div class="premium-logo-card"><img src="assets/1.png" alt="Partner 1"
+                                class="large-partner-logo"
+                                onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+1';">
+                        </div>
+                        <div class="premium-logo-card"><img src="assets/2.png" alt="Partner 2"
+                                class="large-partner-logo"
+                                onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+2';">
+                        </div>
+                        <div class="premium-logo-card"><img src="assets/3.png" alt="Partner 3"
+                                class="large-partner-logo"
+                                onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+3';">
+                        </div>
+                        <div class="premium-logo-card"><img src="assets/4.png" alt="Partner 4"
+                                class="large-partner-logo"
+                                onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+4';">
+                        </div>
+                        <div class="premium-logo-card"><img src="assets/5.png" alt="Partner 5"
+                                class="large-partner-logo"
+                                onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+5';">
+                        </div>
+                        <div class="premium-logo-card"><img src="assets/6.png" alt="Partner 6"
+                                class="large-partner-logo"
+                                onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+6';">
+                        </div>
+                        <div class="premium-logo-card"><img src="assets/7.png" alt="Partner 7"
+                                class="large-partner-logo"
+                                onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+7';">
+                        </div>
+                        <div class="premium-logo-card"><img src="assets/8.png" alt="Partner 8"
+                                class="large-partner-logo"
+                                onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+8';">
+                        </div>
+                        <!-- Cloned group for seamless scrolling -->
+                        <div class="premium-marquee-group" aria-hidden="true">
+                            <div class="premium-logo-card"><img src="assets/1.png" alt="Partner 1"
+                                    class="large-partner-logo"
+                                    onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+1';">
+                            </div>
+                            <div class="premium-logo-card"><img src="assets/2.png" alt="Partner 2"
+                                    class="large-partner-logo"
+                                    onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+2';">
+                            </div>
+                            <div class="premium-logo-card"><img src="assets/3.png" alt="Partner 3"
+                                    class="large-partner-logo"
+                                    onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+3';">
+                            </div>
+                            <div class="premium-logo-card"><img src="assets/4.png" alt="Partner 4"
+                                    class="large-partner-logo"
+                                    onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+4';">
+                            </div>
+                            <div class="premium-logo-card"><img src="assets/5.png" alt="Partner 5"
+                                    class="large-partner-logo"
+                                    onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+5';">
+                            </div>
+                            <div class="premium-logo-card"><img src="assets/6.png" alt="Partner 6"
+                                    class="large-partner-logo"
+                                    onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+6';">
+                            </div>
+                            <div class="premium-logo-card"><img src="assets/7.png" alt="Partner 7"
+                                    class="large-partner-logo"
+                                    onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+7';">
+                            </div>
+                            <div class="premium-logo-card"><img src="assets/8.png" alt="Partner 8"
+                                    class="large-partner-logo"
+                                    onerror="this.src='https://via.placeholder.com/300x120/FFF0D9/C97900?text=Partner+8';">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Explore Us Section -->
+    <section class="draper-house-section" id="explore-us">
+        <div class="section-container">
+            <div class="draper-house-header">
+                <div class="header-left">
+                    <span class="draper-label">/ INSIDE DRAPER HOUSE</span>
+                    <h2 class="draper-title">Where founders<br><span class="text-gradient-warm">build together.</span>
+                    </h2>
+                </div>
+                <div class="header-right">
+                    <p class="draper-description">More than a venue — Draper House is where ideas meet execution. From
+                        founder conversations and startup sessions to mentorship, collaboration, and real innovation,
+                        this is the environment where ambitious builders come together.</p>
+                </div>
+            </div>
+
+            <div class="draper-bento-grid">
+                <!-- Top Row: Left Large, Right 2 small stacked -->
+                <div class="draper-bento-row-1">
+                    <div class="draper-card large-card">
+                        <img src="assets/s1.png" alt="Draper House Environment" class="draper-img"
+                            onerror="this.src='https://via.placeholder.com/800x600/071B4D/FFF0D9?text=Founder+Sessions';">
+                    </div>
+                    <div class="draper-stacked">
+                        <div class="draper-card small-card">
+                            <img src="assets/s2.png" alt="Startup Culture" class="draper-img"
+                                onerror="this.src='https://via.placeholder.com/400x290/071B4D/FFF0D9?text=Community+Energy';">
+                        </div>
+                        <div class="draper-card small-card">
+                            <img src="assets/s3.png" alt="Builder Space" class="draper-img"
+                                onerror="this.src='https://via.placeholder.com/400x290/071B4D/FFF0D9?text=Builder+Space';">
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Row: 1 Wide -->
+                <div class="draper-bento-row-2">
+                    <div class="draper-card wide-card">
+                        <img src="assets/s4.png" alt="Pitch Environment" class="draper-img"
+                            onerror="this.src='https://via.placeholder.com/1200x400/071B4D/FFF0D9?text=Pitch+Environment';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats & Testimonials Section -->
+    <section class="proof-section" id="proof">
+        <div class="section-container">
+            <!-- Stats Row -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-number">20+</h3>
+                    <p class="stat-label">Stalls Hosted</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">10+</h3>
+                    <p class="stat-label">VCs & Mentors</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">400+</h3>
+                    <p class="stat-label">Footfall</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">1</h3>
+                    <p class="stat-label">Unforgettable Day</p>
+                </div>
+            </div>
+
+            <!-- Testimonials Row -->
+            <div class="testimonials-header text-center">
+                <span class="proof-label">/ REAL OUTCOMES</span>
+                <h2 class="proof-title">Proof that this event<br><span class="text-gradient-warm">creates
+                        momentum.</span></h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                            </path>
+                            <path
+                                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">“Walking into Draper Carnival felt different. We pitched, met builders,
+                        and walked away with clarity, connections, and confidence.”</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">Aarav K.</h4>
+                            <p class="author-role">Founder, NeuralForge</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                            </path>
+                            <path
+                                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">“The energy inside Draper House was unreal. One conversation turned into
+                        partnerships we never expected.”</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">Tanvi R.</h4>
+                            <p class="author-role">Co-founder, Lumen Labs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                            </path>
+                            <path
+                                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">“From VCs to mentors to ambitious builders — this felt less like an
+                        event and more like momentum.”</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">Karan M.</h4>
+                            <p class="author-role">Founder, Pixelpush</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Should Join Section -->
+    <section class="who-section" id="who-should-join">
+        <div class="section-container">
+            <div class="who-split-layout">
+                <!-- Left Side -->
+                <div class="who-left">
+                    <span class="who-label">/ WHO SHOULD JOIN</span>
+                    <h2 class="who-title">Built for founders<br><span class="text-gradient-carnival">who move
+                            fast.</span></h2>
+                    <p class="who-description">This carnival is built for ambitious student founders, builders, and
+                        operators ready to pitch, network, meet mentors, and build momentum around real ideas.</p>
+
+                    <div class="audience-cards">
+                        <div class="audience-card">
+                            <svg class="audience-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"></path>
+                                <path d="M12 14c-4.42 0-8 2.24-8 5v2h16v-2c0-2.76-3.58-5-8-5z"></path>
+                            </svg>
+                            <span>Student Founders</span>
+                        </div>
+                        <div class="audience-card">
+                            <svg class="audience-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                            <span>Early-Stage Startups</span>
+                        </div>
+                        <div class="audience-card">
+                            <svg class="audience-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            <span>Builders & Indie Hackers</span>
+                        </div>
+                        <div class="audience-card">
+                            <svg class="audience-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"></path>
+                            </svg>
+                            <span>Creators Exploring Startups</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side -->
+                <div class="who-right">
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h3 class="feature-title">You have something worth pitching</h3>
+                            <p class="feature-text">An idea, prototype, startup, or bold experiment — bring it.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">You want real connections</h3>
+                            <p class="feature-text">Meet mentors, founders, VCs, and ambitious builders face-to-face.
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">You want visibility</h3>
+                            <p class="feature-text">Pitch on stage, showcase ideas, and be seen by the right people.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">You want momentum</h3>
+                            <p class="feature-text">Walk in with ideas. Walk out with clarity, people, and direction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 6. FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Who can participate in the pitch competition?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>The pitch competition is open to early-stage founders (pre-seed to seed stage) across all
+                            sectors who have a bold vision and a working prototype or minimum viable product.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Is registration free?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, registration for the event is completely free for both pitching startups and general
+                            attendees, subject to approval and capacity constraints.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        What should I bring?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Bring your energy, plenty of business cards, and your pitch deck if you are participating. A
+                            notebook and an open mind for networking are highly recommended!</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Will there be actual carnival activities?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely! The event seamlessly blends high-stakes startup pitches with premium carnival
+                            entertainment, gourmet food stalls, and interactive networking games.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="section-container">
+            <div class="cta-container">
+                <div class="cta-split">
+                    <div class="cta-left">
+                        <span class="cta-label">/ FINAL CALL</span>
+                        <h2 class="cta-title">The stage is set.<br><span class="text-gradient-carnival-glow">Are
+                                you?</span></h2>
+                        <p class="cta-desc-main">One day. One stage. Hundreds of ambitious builders. Pitch, network,
+                            meet mentors, and make the kind of connections that move ideas forward.</p>
+                        <p class="cta-desc-sub">If you’ve been waiting for the right room — this is it.</p>
+                    </div>
+                    <div class="cta-right">
+                        <div class="cta-button-stack">
+                            <a href="https://luma.com/twxn6m46" target="_blank" class="btn-cta-primary">Register
+                                Stall</a>
+                            <a href="https://luma.com/trbmiajs" target="_blank" class="btn-cta-secondary">Register as
+                                Visitor</a>
+                            <p class="cta-helper">Limited spots available for pitching startups.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <!-- Left Brand Block -->
+                <div class="footer-brand">
+                    <div class="footer-logos">
+                        <img src="assets/DraperU India Logo 1.png" alt="DraperU India" class="footer-logo">
+                    </div>
+                    <p class="footer-desc">Draper Carnival brings together ambitious founders, builders, mentors,
+                        investors, and startup enthusiasts for a high-energy day of pitching, networking, and real
+                        opportunities.</p>
+                    <p class="footer-collab">Powered by the Draper Ecosystem.</p>
+
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Email">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Columns Grid -->
+                <div class="footer-grid">
+                    <!-- Column 1 -->
+                    <div class="footer-col">
+                        <h4>EVENT</h4>
+                        <a href="#about">About</a>
+                        <a href="#prizes">Prizes</a>
+                        <a href="#partners">Partners</a>
+                        <a href="#explore-us">Explore Us</a>
+                        <a href="#who-should-join">Who Should Join</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="footer-col">
+                        <h4>REGISTER</h4>
+                        <a href="https://luma.com/trbmiajs" target="_blank">Visitor Registration</a>
+                        <a href="https://luma.com/twxn6m46" target="_blank">Stall Registration</a>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="footer-col">
+                        <h4>PARTNERS</h4>
+                        <span class="static-link">DraperU India</span>
+                        <span class="static-link">TG10X</span>
+                        <span class="static-link">Communitie</span>
+                        <span class="static-link">Draper Ecosystem</span>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div class="footer-col">
+                        <h4>EVENT DETAILS</h4>
+                        <p class="detail-text">Sunday<br>June 7, 2026<br>10:00 AM – 6:00 PM<br>DraperU India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="copyright">&copy; 2026 Draper Carnival. All rights reserved.</p>
+                <p class="credit">Built by DraperU India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
