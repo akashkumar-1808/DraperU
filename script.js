@@ -1,6 +1,6 @@
 /* 
 ==============================================
-   DraperU Summer Carnival Pitch Competition 
+   DraperU  Summer Carnival Pitch Competition 
    Vanilla JavaScript
 ============================================== 
 */
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Navbar Scroll Effect (Floating/Glassmorphism Enhancement)
     const navbar = document.querySelector('.navbar');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.style.top = '10px';
@@ -54,24 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Simple Floating Particles Effect in Hero Section
     const particlesContainer = document.getElementById('particles');
-    
+
     if (particlesContainer) {
         const particleCount = 20;
-        
+
         for (let i = 0; i < particleCount; i++) {
             createParticle();
         }
 
         function createParticle() {
             const particle = document.createElement('div');
-            
+
             // Random styling for particles
             const size = Math.random() * 4 + 2; // 2px to 6px
             const posX = Math.random() * 100; // 0% to 100%
             const posY = Math.random() * 100; // 0% to 100%
             const duration = Math.random() * 20 + 10; // 10s to 30s
             const delay = Math.random() * 5; // 0s to 5s
-            
+
             // Apply styles inline
             particle.style.position = 'absolute';
             particle.style.width = `${size}px`;
@@ -82,13 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
             particle.style.top = `${posY}%`;
             particle.style.boxShadow = '0 0 10px rgba(255, 179, 0, 0.8)';
             particle.style.pointerEvents = 'none';
-            
+
             // CSS Animation
             particle.style.animation = `floatParticle ${duration}s ease-in-out ${delay}s infinite alternate`;
-            
+
             particlesContainer.appendChild(particle);
         }
-        
+
         // Add dynamic keyframes to document head
         const style = document.createElement('style');
         style.innerHTML = `
@@ -112,42 +112,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Countdown Timer Logic
     const countdownTimer = document.getElementById('timer-display');
     const countdownMessage = document.getElementById('countdown-message');
-    
+
     if (countdownTimer) {
         const daysEl = document.getElementById('days');
         const hoursEl = document.getElementById('hours');
         const minutesEl = document.getElementById('minutes');
         const secondsEl = document.getElementById('seconds');
-        
+
         // Target Date: June 7, 2026 10:00 AM IST
         // IST is UTC+5:30
         const targetDate = new Date("2026-06-07T10:00:00+05:30").getTime();
-        
+
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = targetDate - now;
-            
+
             if (distance <= 0) {
                 clearInterval(timerInterval);
                 countdownTimer.style.display = 'none';
                 countdownMessage.classList.remove('hidden');
                 return;
             }
-            
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
+
             daysEl.textContent = days.toString().padStart(2, '0');
             hoursEl.textContent = hours.toString().padStart(2, '0');
             minutesEl.textContent = minutes.toString().padStart(2, '0');
             secondsEl.textContent = seconds.toString().padStart(2, '0');
         }
-        
+
         // Initial call to prevent 1s delay
         updateCountdown();
-        
+
         // Update every second
         const timerInterval = setInterval(updateCountdown, 1000);
     }
@@ -161,14 +161,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = posterShowcase.getBoundingClientRect();
             const x = e.clientX - rect.left; // x position within the element
             const y = e.clientY - rect.top;  // y position within the element
-            
+
             // Calculate rotation (max 5 degrees for a subtle effect)
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
+
             const rotateX = ((y - centerY) / centerY) * -5;
             const rotateY = ((x - centerX) / centerX) * 5;
-            
+
             posterContainer.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
         });
 
@@ -176,5 +176,96 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset the transform smoothly when the mouse leaves
             posterContainer.style.transform = `rotateX(0) rotateY(0) translateZ(0)`;
         });
+    }
+
+    // 6. Mobile Navbar Hamburger Menu Logic
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNavMenu = document.getElementById('mobile-nav-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (mobileMenuToggle && mobileNavMenu) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileNavMenu.classList.toggle('active');
+
+            // Animate hamburger toggle icon
+            if (mobileNavMenu.classList.contains('active')) {
+                mobileMenuToggle.style.transform = 'rotate(90deg)';
+                mobileMenuToggle.style.color = 'var(--clr-warm-orange)';
+            } else {
+                mobileMenuToggle.style.transform = 'rotate(0deg)';
+                mobileMenuToggle.style.color = 'var(--clr-royal-navy)';
+            }
+        });
+
+        // Close menu when a link is clicked to allow smooth scrolling
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNavMenu.classList.remove('active');
+                mobileMenuToggle.style.transform = 'rotate(0deg)';
+                mobileMenuToggle.style.color = 'var(--clr-royal-navy)';
+            });
+        });
+    }
+
+    // 7. Copy Contact Number to Clipboard
+    const copyContactBtn = document.getElementById('copy-contact-btn');
+    const copyToast = document.getElementById('copy-toast');
+    let toastTimeout;
+
+    if (copyContactBtn && copyToast) {
+        copyContactBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const phoneNumber = '6309433303';
+
+            // Clipboard API with fallback
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(phoneNumber).then(showToast).catch(err => {
+                    console.error('Clipboard copy failed', err);
+                    fallbackCopy(phoneNumber);
+                });
+            } else {
+                fallbackCopy(phoneNumber);
+            }
+
+            // Button interaction animation
+            copyContactBtn.classList.add('clicked');
+            setTimeout(() => {
+                copyContactBtn.classList.remove('clicked');
+            }, 200);
+        });
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed'; // Avoid scrolling to bottom
+            textArea.style.left = '-999999px';
+            textArea.style.top = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('Fallback copy failed', err);
+            } finally {
+                textArea.remove();
+            }
+        }
+
+        function showToast() {
+            // Reset existing timeout if clicked rapidly
+            if (toastTimeout) {
+                clearTimeout(toastTimeout);
+            }
+
+            copyToast.classList.add('show');
+
+            // Hide after 1.2 seconds
+            toastTimeout = setTimeout(() => {
+                copyToast.classList.remove('show');
+            }, 1200);
+        }
     }
 });
